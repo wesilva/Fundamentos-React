@@ -3,7 +3,7 @@
 ## Elementos
     - Elementos são os menores blocos de construção de aplicativos React
     ```javascript
-        const element = <h1>Hello, world</h1>;
+        const element = <h1>Hello, World</h1>;
     ```
     - Ao contrário dos elementos DOM do navegador, os elementos React são objetos simples e baratos de criar. O React DOM se encarrega de atualizar o DOM para corresponder aos elementos React
     - Os elementos React são imutáveis. Depois de criar um elemento, você não pode alterar seus filhos ou atributos. Um elemento é como um único quadro em um filme: ele representa a IU em um determinado ponto no tempo
@@ -14,11 +14,13 @@
     - Com JSX, podemos escrever o que parece HTML, e também podemos criar e usar nossas próprias tags semelhantes a XML
     - Exemplo de JSX atribuído a uma variável: 
     ```javascript
-        const heading = <h1 className="site-heading">Hello, World</h1>
+    const heading = <h1 className="site-heading">Hello, World</h1>
     ```
     - O uso de JSX não é obrigatório para escrever React. Por baixo do capô, ele está em execução createElement, que pega a tag, o objeto que contém as propriedades e os filhos do componente e renderiza as mesmas informações. 
     - Exemplo que terá a mesma saída do JSX acima.
-    ` const heading = React.createElement('h1', {className: 'site-heading'}, Hello, World)`
+    ```javascript
+    const heading = React.createElement('h1', {className: 'site-heading'}, Hello, World)
+    ```
     - O JSX está mais próximo do JavaScript e não do HTML, portanto, há algumas diferenças importantes a serem observadas ao escrevê-lo.
 
     * className é usado em vez de class para adicionar classes CSS, pois class é uma palavra chave reservada em JS
@@ -26,14 +28,16 @@
     * As tags de autofechamento devem terminar em uma barra - por exemplo <img />
 
     - As expressões JS podem ser incorporadas ao JSX usando chaves, incluindo variáveis, funções e propriedades.
-        `const name = 'Wellington'
-        const heading = <h1>Hello, {name}</h1>`
+    ```javascript
+    const name = 'Wellington'
+    const heading = <h1>Hello, {name}</h1>
+    ```
     - o React DOM usa a convenção de nomenclatura de propriedade camelCase em vez de nomes de atributos HTML
     - Babel compila JSX para chamadas React.createElement ().
 
 ## Componentes e funções
     - Componentes podem ser aninhados em outros componentes e os componentes de função e de classe podem ser misturados
-    # Class Component
+    **Class Component**
     ```javascript
         class ClassComponent extends Component {
             render() {
@@ -44,7 +48,7 @@
     - Um componente de classe deve incluir o método render() e o return só pode retornar um elemento pai.
     - Anteriormente era necessário ter o construtor em componentes de classe no React, mas não é mais necessário.
 
-    # Function Component
+    **Function Component**
     ```javascript
     const SimpleComponent = () => {
         return <div>Example</div>
