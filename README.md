@@ -18,9 +18,7 @@
     ```
     - O uso de JSX não é obrigatório para escrever React. Por baixo do capô, ele está em execução createElement, que pega a tag, o objeto que contém as propriedades e os filhos do componente e renderiza as mesmas informações. 
     - Exemplo que terá a mesma saída do JSX acima.
-    ```javascript
-        const heading = React.createElement('h1', {className: 'site-heading'}, Hello, World)
-    ```
+    ` const heading = React.createElement('h1', {className: 'site-heading'}, Hello, World)`
     - O JSX está mais próximo do JavaScript e não do HTML, portanto, há algumas diferenças importantes a serem observadas ao escrevê-lo.
 
     * className é usado em vez de class para adicionar classes CSS, pois class é uma palavra chave reservada em JS
@@ -28,10 +26,8 @@
     * As tags de autofechamento devem terminar em uma barra - por exemplo <img />
 
     - As expressões JS podem ser incorporadas ao JSX usando chaves, incluindo variáveis, funções e propriedades.
-    ```javascript
-        const name = 'Wellington'
-        const heading = <h1>Hello, {name}</h1>
-    ```
+        `const name = 'Wellington'
+        const heading = <h1>Hello, {name}</h1>`
     - o React DOM usa a convenção de nomenclatura de propriedade camelCase em vez de nomes de atributos HTML
     - Babel compila JSX para chamadas React.createElement ().
 
